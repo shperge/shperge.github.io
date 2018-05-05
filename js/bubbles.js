@@ -18,6 +18,9 @@ var SUPER_BUBBLES_BLINK_SPEED = 525;
 var imageg = new Image();
       imageg.src = 'img/g.png';
 
+var boyar = new Image();
+      boyar.src = 'img/b.png';
+
 function initBubbles() { 
 	BUBBLES_COUNTER = 0;
 	BUBBLES_ARRAY.length = 0;
@@ -60,8 +63,10 @@ function drawBubbles() {
 				ctxs.closePath();*/
 
 				//ctx.clearRect(0, 0, 1000, 1000);
-				ctx.drawImage(imageg, x-7, y-7, 12, 12)
+				ctx.drawImage(imageg, x-7, y-7, 15, 15)
 				
+
+
 				
 				BUBBLES_ARRAY.push( parseInt(correctionX(x, bubble)) + "," + parseInt(y) + ";" + line + ";" + bubble + ";" + type + ";0" );
 				i ++;
@@ -104,11 +109,13 @@ function blinkSuperBubbles() {
 					eraseBubble("s", sx, sy);
 				} else { 
 					var ctx = getBubblesCanevasContext();
+
 					ctx.fillStyle = "#dca5be";
-					ctx.beginPath();
-					ctx.arc(sx, sy, SUPER_BUBBLES_SIZE, 0, 2 * Math.PI, false);
-					ctx.fill();
-					ctx.closePath();
+					
+					ctx.drawImage(boyar, sx-5, sy-10, 10, 20)
+
+					
+
 				}
 
 			}
@@ -150,7 +157,7 @@ function eraseBubble(t, x, y) {
 
 	var size = "";
 	if (t === "s") { 
-		size = SUPER_BUBBLES_SIZE;
+		size = SUPER_BUBBLES_SIZE+4;
 	} else { 
 		size = BUBBLES_SIZE;
 	}

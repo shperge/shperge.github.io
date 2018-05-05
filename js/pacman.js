@@ -246,14 +246,14 @@ function drawPacman() {
 
 
 	if (FLAG) {
-		ctx.drawImage(image, PACMAN_POSITION_X-20, PACMAN_POSITION_Y-20, 38, 38)
+		ctx.drawImage(image, PACMAN_POSITION_X-20, PACMAN_POSITION_Y-20, 45, 45)
 	} else {
 	/*if (Math.random() >= 0.5) {
 		ctx.drawImage(image, PACMAN_POSITION_X-20, PACMAN_POSITION_Y-20, 38, 38)
 	} else {
 		ctx.drawImage(imageOpened, PACMAN_POSITION_X-20, PACMAN_POSITION_Y-20, 38, 38)
 	}*/
-	ctx.drawImage(imageOpened, PACMAN_POSITION_X-20, PACMAN_POSITION_Y-20, 38, 38)
+	ctx.drawImage(imageOpened, PACMAN_POSITION_X-20, PACMAN_POSITION_Y-20, 45, 45)
 	}
 
 	/*var time = new Date();
@@ -280,7 +280,7 @@ function drawPacman() {
 function erasePacman() { 
 
 	var ctx = getPacmanCanevasContext();
-	ctx.clearRect( (PACMAN_POSITION_X - 2) - PACMAN_SIZE, (PACMAN_POSITION_Y - 2) - PACMAN_SIZE, (PACMAN_SIZE * 2) + 5, (PACMAN_SIZE * 2) + 5);
+	ctx.clearRect( (PACMAN_POSITION_X - 2) - PACMAN_SIZE, (PACMAN_POSITION_Y - 2) - PACMAN_SIZE, (PACMAN_SIZE * 2) + 11, (PACMAN_SIZE * 2) + 11);
 }
 
 function killPacman() { 

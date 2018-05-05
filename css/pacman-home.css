@@ -22,14 +22,10 @@
 	left: 182px;
 	height: 100px;
 	width: 118px;
+	display: none;
 }
 #canvas-panel-title-pacman { 
-	background-color: #000;
-	position: absolute;
-	top: 6px;
-	left: 47px;
-	height: 32px;
-	width: 38px;
+	display: none;
 }
 
 #presentation { 
@@ -44,14 +40,15 @@
 }
 #presentation-titles { 
 	position: absolute;
-	width: 360px;
+	width: 420px;
 	height: 28px;
-	top: 10px;
+	top: 0px;
 	left: 117px;
 	letter-spacing: 2px;
 	font-size: 20px;
 	text-transform: uppercase;
 	color: #fff;
+	margin-top: -70px;
 }
 #canvas-presentation-blinky, #canvas-presentation-pinky, #canvas-presentation-inky, #canvas-presentation-clyde { 
 	position: absolute;
@@ -111,6 +108,7 @@
 	bottom: 100px;
 	width: 500px;
 	height: 50px;
+	display: none;
 }
 
 @media screen and (min-height:1200px), screen and (min-device-height : 1200px) { 
@@ -121,8 +119,8 @@
 
 	
 	#canvas-panel-title-pacman { 
-		left: 49px;
-		width: 42px;
+		
+
 	}
 }
 
